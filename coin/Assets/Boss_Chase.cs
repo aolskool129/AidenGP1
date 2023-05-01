@@ -48,7 +48,7 @@ public class Boss_Chase : StateMachineBehaviour
             animator.SetTrigger("Phase3Attack");
         }
         //boss defeated
-        else if (!bossBehavior.isDead)
+        else if (bossBehavior.isDead)
         {
             animator.SetTrigger("Death");
         }

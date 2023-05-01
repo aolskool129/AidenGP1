@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class BossBehavior : MonoBehaviour
@@ -25,9 +26,6 @@ public class BossBehavior : MonoBehaviour
     public float timer;
     public int waitingTime;
     //create a function that will clone and create a version of our prefabed projectile
-
-
-
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +33,10 @@ public class BossBehavior : MonoBehaviour
         playerManager = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerManager>();
 
         player = GameObject.FindGameObjectWithTag("Player").transform;
+    }
+    public void TakeDamage()
+    {
+        bossHealth -= 2;
     }
     public void LookAtPlayer()
     {
@@ -73,16 +75,6 @@ public class BossBehavior : MonoBehaviour
             }
         }
     }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.tag == "Player")
-        {
-            Debug.Log("boom");
-            
-            playerManager.TakeDamage();
-        }
-    }
     private void Update()
     {
         //create a series of if else statements that will check to see 
@@ -100,11 +92,12 @@ public class BossBehavior : MonoBehaviour
             phase2 = false;
             speed = 1;
             attackRange = 8;
-            Debug.Log("phase 3 ");
+            Debug.Log("phase 3");
             phase3 = true;
         }
         else if (bossHealth <= 0)
         {
+            speed = 0f;
             phase3 = false;
             Debug.Log("isDead");
             isDead = true;
