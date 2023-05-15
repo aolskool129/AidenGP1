@@ -6,12 +6,15 @@ using UnityEngine.UI;
 public class ScoreScript : MonoBehaviour
 {
     public Text Myscoretext;
-    private int ScoreNum;
+    PlayerManager playermanager;
 
     // Start is called before the first frame update
     void Start()
     {
-        ScoreNum = 0;
-        Myscoretext.text = "Score : " + ScoreNum;
+        playermanager = GameObject.FindGameObjectWithTag("PracticePlayer").GetComponent<PlayerManager>();
+    }
+     void Update()
+    {
+        Myscoretext.text = "Score : " + playermanager.coincount;
     }
 }
