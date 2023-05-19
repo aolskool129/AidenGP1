@@ -9,7 +9,8 @@ public class PlayerManager : MonoBehaviour
     public float currentHealth;
     public int coincount;
     PlayerMovement movement;
-
+    public ProjectileBehavior ProjectilePrefab;
+    public Transform LaunchOffset;
     void Start()
     {
         movement = GetComponent<PlayerMovement>();
@@ -36,6 +37,10 @@ public class PlayerManager : MonoBehaviour
         if (currentHealth <= 0)
         {
             PauseGame();
+        }
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Instantiate(ProjectilePrefab, LaunchOffset.position, transform.rotation);
         }
     }
     public void TakeDamage()

@@ -16,6 +16,7 @@ TagManager:
   - Scoretext
   - Score text
   - ' Myscoretext'
+  - Bullet
   layers:
   - Default
   - TransparentFX

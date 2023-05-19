@@ -44802,6 +44802,7 @@ GameObject:
   - component: {fileID: 768403129}
   - component: {fileID: 768403128}
   - component: {fileID: 768403135}
+  - component: {fileID: 768403136}
   m_Layer: 0
   m_Name: PracticePlayer
   m_TagString: PracticePlayer
@@ -44985,6 +44986,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Myscoretext: {fileID: 0}
+--- !u!114 &768403136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768403127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ebac76aeac31b448f3d232d83347bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &896557116
 GameObject:
   m_ObjectHideFlags: 0
