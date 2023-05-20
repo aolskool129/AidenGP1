@@ -11,6 +11,12 @@ TagManager:
   - Point2
   - Grounded
   - Enemy
+  - Coin
+  - Currency
+  - Scoretext
+  - Score text
+  - ' Myscoretext'
+  - Bullet
   layers:
   - Default
   - TransparentFX
